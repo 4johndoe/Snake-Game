@@ -1,11 +1,3 @@
-<!-- FileName: Snake.php
- * Author: Pratibha Natani
- * Description: This file contains the Main game logic. Contains the php and javascript code.
- * References:
- * http://www.tizag.com/phpT/forms.php
- * http://www.w3schools.com/js/js_objects.asp
- * http://odhyan.com/blog/2010/10/snake-in-javascript/
- -->
 <html>
 	<head>
 	  <link rel="stylesheet" type="text/css" href="Snake.css">
@@ -49,7 +41,6 @@
 	//Game Flags
 	var moveOne = true;
 	var snakeDead = false;
-
 	//for setting Game Score
 	var Score=0;
 	var snakePart = 2;
@@ -148,11 +139,9 @@
                 this.y = 30;	
                 this.dir = 'R';
             }
-
             Snake.prototype.changeDir = function(dir) {
                 this.dir = dir;
             }
-
 			
             Snake.prototype.draw = function() {
 				if ( snakeDead )
@@ -214,7 +203,6 @@
 				moveOne = false;
 				return true;
             }
-
             Snake.prototype.move = function() {
                 switch (this.dir) {
                     case 'L': // Left
@@ -243,9 +231,7 @@
 				  drawFood();
 				  
             }
-
             var mrSnake = new Snake();
-
             window.addEventListener('keydown', function(event) {
                 switch (event.keyCode) {
                     case 37: // Left
@@ -274,7 +260,6 @@
                         break;
                 }
             }, false);
-
             timer=setInterval('mrSnake.move()', SnakePace);
 		
 </script>
